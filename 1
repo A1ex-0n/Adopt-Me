@@ -1,0 +1,61 @@
+local OrionLib = loadstring(game:HttpGet("https://raw.githubusercontent.com/shlexware/Orion/main/source"))()
+
+-- Create the GUI window
+local Window = OrionLib:MakeWindow({
+    Name = "🐾 Adopt Me Trade Scam 🐾",
+    HidePremium = false,
+    SaveConfig = true,
+    ConfigFolder = "TradeScamConfig"
+})
+
+-- Add a "Main Menu" Tab
+local MainTab = Window:MakeTab({
+    Name = "🔥 Main Menu 🔥",
+    Icon = "rbxassetid://4483345998",
+    PremiumOnly = false
+})
+
+-- Freezer Button
+MainTab:AddButton({
+    Name = "❄️ Freeze Victim's Trade 🧊",
+    Callback = function()
+        print("Freezer option selected!")
+        OrionLib:MakeNotification({
+            Name = "❄️ Freeze Activated",
+            Content = "The victim's trade is frozen!",
+            Image = "rbxassetid://4483345998",
+            Time = 5
+        })
+    end
+})
+
+-- Trader Button
+MainTab:AddButton({
+    Name = "😈 Break Trade ❌",
+    Callback = function()
+        print("Trader option selected!")
+        OrionLib:MakeNotification({
+            Name = "🤝 Trade Breaker",
+            Content = "You have activated the Trader option!",
+            Image = "rbxassetid://4483345998",
+            Time = 5
+        })
+    end
+})
+
+-- Force Button
+MainTab:AddButton({
+    Name = "🤝 Force Confirm 💰",
+    Callback = function()
+        print("Trader option selected!")
+        OrionLib:MakeNotification({
+            Name = "🤝 Force Confirmed",
+            Content = "You have activated Force Confirm",
+            Image = "rbxassetid://4483345998",
+            Time = 5
+        })
+    end
+})
+
+-- Initialize the GUI
+OrionLib:Init()
